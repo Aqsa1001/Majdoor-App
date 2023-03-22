@@ -1,9 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".home">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="467dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="382dp"
+        android:background="@color/my_app"
+        android:orientation="vertical">
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/location"
+        android:layout_width="351dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edit_textfield_corner"
+        android:drawableLeft="@drawable/location"
+        android:hint="  Enter your current location"
+        android:inputType="text"
+        android:textColor="#1E1F1F"
+        android:textSize="15dp" />
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/price"
+                android:layout_width="354dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edit_textfield_corner"
+                android:drawableLeft="@drawable/price"
+                android:hint="  Your offer in PKR"
+                android:inputType="text"
+                android:textColor="#1E1F1F"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="354dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:backgroundTint="@color/black"
+                android:drawableLeft="@drawable/description"
+                android:text="Enter Description of work"
+                android:textColor="@color/my_app"
+                android:textSize="12dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="354dp"
+                android:layout_height="59dp"
+                android:layout_marginLeft="20dp"
+                android:backgroundTint="@color/black"
+                android:text="Ajao ustaad g!"
+                android:textColor="@color/my_app"
+                android:textSize="12dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
