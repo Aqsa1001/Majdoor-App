@@ -8,4 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="my_app">#FFB100</color>
+    <color name="offBlack">#1E1E1E</color>
+    <color name="offBlack2">#7F5800</color>
+    <color name="offWhite">#FFFFFFCC</color>
 </resources>

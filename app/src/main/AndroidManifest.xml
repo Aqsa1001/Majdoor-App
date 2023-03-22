@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -15,13 +16,32 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Majdoor_App"
         tools:targetApi="31">
+        <activity
+            android:name=".CompanyInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CnicActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BasicInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SigninActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WelcomeActivity"
+            android:exported="false" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyAccUMUBqNZ4OiX6LcoVw7HBchI0tCNt6I" />
+
         <activity
             android:name=".home"
-            android:exported="false">
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".chooseActivity"
             android:exported="false"
@@ -39,7 +59,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
     </application>
 

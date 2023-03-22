@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/offBlack"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/welcome"
+        android:layout_width="match_parent"
+        android:layout_height="560dp"
+        android:background="@drawable/welcome"
+        />
+
+    <TextView
+        android:id="@+id/upperBottom_Text_Welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/welcome"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:fontFamily="@font/raleway_bold_italic"
+        android:text="Welcome to"
+        android:textColor="@color/white"
+        android:textSize="35dp" />
+
+    <TextView
+        android:id="@+id/upper_Bottom_Text_Welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/welcome"
+        android:layout_alignParentRight="true"
+        android:text="Majdoor"
+        android:layout_marginTop="27dp"
+        android:fontFamily="@font/raleway_bold_italic"
+        android:textColor="@color/my_app"
+        android:textSize="55dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/my_app">
+
+        <TextView
+            android:id="@+id/Bottom_Text_Welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="140dp"
+            android:text="No more hasstle!"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/raleway_bold_italic"
+            android:textColor="@color/black"/>
+    </RelativeLayout>
+</RelativeLayout>
+
+

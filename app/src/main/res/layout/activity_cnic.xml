@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_app"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="95dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="50dp"
+        android:background="@drawable/reg_top3" />
+
+    <ImageView
+        android:layout_width="122dp"
+        android:layout_height="130dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/reg_top2" />
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="130dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/reg_top1"
+        android:layout_marginRight="300dp"
+        />
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="7dp"
+        app:srcCompat="@drawable/back_arrow"/>
+
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="130dp"
+        android:layout_marginLeft="32dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/reg_top4"/>
+
+
+    <TextView
+        android:id="@+id/Sign_In"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/revalia"
+        android:text="CNIC"
+        android:textColor="@color/offBlack"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Sign_In"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/black_bg">
+
+        <TextView
+            android:id="@+id/cnic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CNIC Number"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="24dp"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:id="@+id/cnicNumber"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/cnic"
+            android:layout_margin="10dp"
+            android:background="@drawable/input_bg"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/anekbangla"
+            android:textColor="@color/offBlack"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearLayout1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/offwhite_bg">
+
+        <TextView
+            android:id="@+id/front_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:text="CNIC (front side)"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"/>
+
+        <ImageView
+            android:id="@+id/cnic_pic"
+            android:layout_width="130dp"
+            android:layout_height="75dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/front_pic"
+            android:background="@drawable/cnic_pic" />
+
+        <Button
+            android:id="@+id/btnBal"
+            android:layout_width="110dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/cnic_pic"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_radius"
+            android:text="Add Pic"
+            android:textColor="#fff"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/offBlack" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearLayout2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/offwhite_bg">
+
+        <TextView
+            android:id="@+id/back_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:text="CNIC (front side)"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"/>
+
+        <ImageView
+            android:id="@+id/cnic_pic1"
+            android:layout_width="130dp"
+            android:layout_height="75dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/back_pic"
+            android:background="@drawable/cnic_pic" />
+
+        <Button
+            android:id="@+id/btnBal2"
+            android:layout_width="110dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/cnic_pic1"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_radius"
+            android:text="Add Pic"
+            android:textColor="#fff"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/offBlack" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/bottom_black"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="80dp"
+        android:background="@drawable/bottom_off" />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="139dp"
+        android:layout_height="41dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_radius2"
+        android:layout_centerHorizontal="true"
+        android:text="Done"
+        android:layout_marginBottom="15dp"
+        android:textColor="@color/offBlack"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/my_app" />
+</RelativeLayout>
+
