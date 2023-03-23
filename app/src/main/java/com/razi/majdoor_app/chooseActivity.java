@@ -9,19 +9,28 @@ import android.widget.ImageButton;
 
 public class chooseActivity extends AppCompatActivity {
 
-    ImageButton customerbtn;
+    ImageButton customerbtn,laborbtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose);
         customerbtn = findViewById(R.id.customerbtn);
+        laborbtn = findViewById(R.id.laborbtn);
+
 
 
         customerbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(chooseActivity.this, home.class);
+                Intent intent = new Intent(chooseActivity.this, SigninActivity.class);
+                startActivity(intent);
+            }
+        });
+        laborbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(chooseActivity.this, SigninActivity.class);
                 startActivity(intent);
             }
         });

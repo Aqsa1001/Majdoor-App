@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 // on below line we are
                 // creating a new intent
-                Intent i = new Intent(MainActivity.this, chooseActivity.class);
+                Intent i = new Intent(MainActivity.this, WelcomeActivity .class);
 
 
                 // on below line we are
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 // our current activity.
                 finish();
             }
-        }, 2000);
+        }, 1000);
 
     }
 }

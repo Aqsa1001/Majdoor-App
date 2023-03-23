@@ -71,7 +71,7 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/Bio"
+        android:id="@+id/forgotText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/etPass"
@@ -84,14 +84,14 @@
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/btnBal"
+        android:id="@+id/signInbtn"
         android:layout_width="139dp"
         android:layout_height="41dp"
         android:layout_alignParentRight="true"
         android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
         app:backgroundTint="@color/offBlack"
-        android:layout_below="@id/Bio"
+        android:layout_below="@id/forgotText"
         android:background="@drawable/button_radius"
         android:text="Sign in"
         android:textColor="#fff"
@@ -105,7 +105,7 @@
         android:layout_centerHorizontal="true"
         android:layout_height="5dp"
         android:layout_marginTop="15dp"
-        android:layout_below="@id/btnBal"
+        android:layout_below="@id/signInbtn"
         android:background="@drawable/dotline"
         />
 
@@ -123,7 +123,7 @@
 
 
     <ImageView
-        android:id="@+id/google"
+        android:id="@+id/googleImage"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_below="@id/loginWith"
@@ -139,7 +139,7 @@
         android:background="@drawable/signin_bottom"
         />
     <TextView
-        android:id="@+id/Account"
+        android:id="@+id/CreateAccountText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"

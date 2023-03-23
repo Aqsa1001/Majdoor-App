@@ -130,7 +130,7 @@
         android:layout_marginRight="20dp"
         app:backgroundTint="@color/offBlack"
         android:background="@drawable/button_radius"
-        android:text="Sign in"
+        android:text="Sign Up"
         android:textColor="#FFFF"
         android:textSize="18dp"
         android:textStyle="bold"/>
