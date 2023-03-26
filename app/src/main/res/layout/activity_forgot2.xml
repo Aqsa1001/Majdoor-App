@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_app"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="94dp"
+        android:background="@drawable/forgot_top"/>
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        app:srcCompat="@drawable/back_arrow"/>
+
+    <TextView
+        android:id="@+id/Sign_In"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="80dp"
+        android:text="Verification"
+        android:textSize="40dp"
+        android:fontFamily="@font/revalia"
+        android:textColor="@color/offBlack"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Verification Code"
+        android:layout_below="@id/Sign_In"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="50dp"
+        android:textSize="29dp"
+        android:fontFamily="@font/anekbangla"
+        android:textColor="@color/offBlack" />
+
+
+
+    <TextView
+        android:id="@+id/sen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/enter"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="15dp"
+        android:text="If you don't receive a code resend"
+        android:textColor="@color/offBlack"
+        android:fontFamily="@font/anekbangla"
+        android:textSize="18dp" />
+
+
+    <Button
+        android:id="@+id/btnBal"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/sen"
+        android:background="@drawable/button_radius"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"
+        android:text="Verify"
+        android:textColor="#fff"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/offBlack" />
+
+    <ImageView
+        android:id="@+id/bottom_black"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="250dp"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/forgot_bottom" />
+
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="167dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/forgot2_bottom" />
+</RelativeLayout>

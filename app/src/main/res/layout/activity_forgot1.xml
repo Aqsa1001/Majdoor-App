@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_app"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="94dp"
+        android:background="@drawable/forgot_top"/>
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        app:srcCompat="@drawable/back_arrow"/>
+
+    <TextView
+        android:id="@+id/Sign_In"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/revalia"
+        android:text="Forgot Password"
+        android:textSize="35dp"
+        android:textColor="@color/offBlack"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Email Address"
+        android:layout_below="@id/Sign_In"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/anekbangla"
+        android:layout_marginLeft="23dp"
+        android:textSize="29dp"
+        android:textColor="@color/offBlack" />
+
+    <EditText
+        android:id="@+id/etID1"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/input_bg"
+        android:drawableLeft="@drawable/mail_vector"
+        android:drawablePadding="15dp"
+        android:hint="Enter Email or Mobile No"
+        android:layout_below="@id/enter"
+        android:textAlignment="viewStart"
+        android:paddingLeft="10dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/offBlack"
+        android:fontFamily="@font/anekbangla"
+        />
+
+    <Button
+        android:id="@+id/btnBal"
+        android:layout_width="139dp"
+        android:layout_height="41dp"
+        android:layout_below="@id/etID1"
+        android:background="@drawable/button_radius"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"
+        android:text="Send Code"
+        android:textColor="#fff"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/offBlack" />
+
+    <ImageView
+        android:id="@+id/bottom_black"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="250dp"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/forgot_bottom" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="125dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="167dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/forgot1_bottom" />
+</RelativeLayout>
