@@ -10,7 +10,7 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 
 public class WelcomeActivity extends AppCompatActivity {
-ImageView welcome;
+    ImageView welcome;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {

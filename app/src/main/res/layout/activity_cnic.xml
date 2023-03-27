@@ -75,21 +75,26 @@
             android:id="@+id/cnic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CNIC Number"
+            android:layout_centerHorizontal="true"
+            android:text="CNIC #"
             android:textColor="@color/white"
-            android:textStyle="bold"
             android:textSize="24dp"
-            android:layout_centerHorizontal="true" />
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/cnicNumber"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_below="@id/cnic"
-            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/input_bg"
             android:drawablePadding="15dp"
             android:fontFamily="@font/anekbangla"
+            android:hint="Enter your CNIC No"
+            android:textAlignment="center"
             android:textColor="@color/offBlack"
             android:textStyle="bold" />
     </RelativeLayout>

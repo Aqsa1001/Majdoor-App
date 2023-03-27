@@ -29,7 +29,7 @@
         app:srcCompat="@drawable/signup_top" />
 
     <TextView
-        android:id="@+id/Sign_In"
+        android:id="@+id/Banner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -43,7 +43,7 @@
         android:textColor="@color/offBlack"/>
 
     <EditText
-        android:id="@+id/etID1"
+        android:id="@+id/signupEmailField"
         android:layout_width="match_parent"
         android:layout_height="43dp"
         android:layout_centerHorizontal="true"
@@ -51,7 +51,7 @@
         android:drawableLeft="@drawable/mail_vector"
         android:drawablePadding="15dp"
         android:hint="Enter Email or Mobile No"
-        android:layout_below="@id/Sign_In"
+        android:layout_below="@id/Banner"
         android:textAlignment="viewStart"
         android:paddingLeft="10dp"
         android:textStyle="bold"
@@ -63,12 +63,12 @@
         />
 
     <EditText
-        android:id="@+id/etPass1"
+        android:id="@+id/signupPassField"
         android:layout_width="match_parent"
         android:layout_height="43dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:layout_below="@id/etID1"
+        android:layout_below="@id/signupEmailField"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/input_bg"
@@ -83,12 +83,12 @@
         android:fontFamily="@font/anekbangla" />
 
     <EditText
-        android:id="@+id/etPass2"
+        android:id="@+id/signupConfPassField"
         android:layout_width="match_parent"
         android:layout_height="43dp"
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/etPass1"
+        android:layout_below="@id/signupPassField"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/input_bg"
@@ -106,7 +106,7 @@
         android:id="@+id/otp"
         android:layout_width="150dp"
         android:layout_height="43dp"
-        android:layout_below="@id/etPass2"
+        android:layout_below="@id/signupConfPassField"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
@@ -121,10 +121,10 @@
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/btnBal"
+        android:id="@+id/signupBtn"
         android:layout_width="139dp"
         android:layout_height="41dp"
-        android:layout_below="@id/etPass2"
+        android:layout_below="@id/signupConfPassField"
         android:layout_alignParentRight="true"
         android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
@@ -143,7 +143,7 @@
         android:layout_centerHorizontal="true"
         android:layout_height="5dp"
         android:layout_marginTop="25dp"
-        android:layout_below="@id/btnBal"
+        android:layout_below="@id/signupBtn"
         android:background="@drawable/dotline"
         />
 
