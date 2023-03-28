@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1014942080803",
+    "project_id": "majdoor-app-112fc",
+    "storage_bucket": "majdoor-app-112fc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1014942080803:android:5802845458a19a8f9b7696",
+        "android_client_info": {
+          "package_name": "com.razi.majdoor_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1014942080803-rfckvohgb54ea7ms7tgi5750963bml9t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHgWV12OVD3nXeVK516_D-2IogcLYUXfo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1014942080803-rfckvohgb54ea7ms7tgi5750963bml9t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

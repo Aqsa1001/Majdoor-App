@@ -44,13 +44,87 @@
         android:fontFamily="@font/anekbangla"
         android:textColor="@color/offBlack" />
 
+    <LinearLayout
+        android:id="@+id/lin1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/enter"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/otp_box"
+            android:id="@+id/otp1"
+            android:gravity="center"
+            android:maxLines="1"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textColor="@color/offBlack"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/otp_box"
+            android:id="@+id/otp2"
+            android:gravity="center"
+            android:maxLines="1"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textColor="@color/offBlack"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="13dp" />
+        <EditText
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/otp_box"
+            android:id="@+id/otp3"
+            android:gravity="center"
+            android:maxLines="1"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textColor="@color/offBlack"
+            android:layout_marginLeft="13dp"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+        <EditText
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/otp_box"
+            android:id="@+id/otp4"
+            android:gravity="center"
+            android:maxLines="1"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:layout_marginLeft="13dp"
+            android:textColor="@color/offBlack"
+            android:textSize="24dp"
+            android:textStyle="bold"/>
+
+
+
+    </LinearLayout>
+
 
 
     <TextView
         android:id="@+id/sen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/enter"
+        android:layout_below="@id/lin1"
         android:layout_centerInParent="true"
         android:layout_marginTop="15dp"
         android:text="If you don't receive a code resend"
@@ -60,7 +134,7 @@
 
 
     <Button
-        android:id="@+id/btnBal"
+        android:id="@+id/verify_btn"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_below="@id/sen"

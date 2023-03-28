@@ -30,7 +30,7 @@ public class chooseActivity extends AppCompatActivity {
         laborbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(chooseActivity.this, SigninActivity.class);
+                Intent intent = new Intent(chooseActivity.this, RecentProjectActivity.class);
                 startActivity(intent);
             }
         });

@@ -18,6 +18,12 @@
         android:theme="@style/Theme.Majdoor_App"
         tools:targetApi="31">
         <activity
+            android:name=".VerifyWorkActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RecentProjectActivity"
+            android:exported="false" />
+        <activity
             android:name=".Forgot3Activity"
             android:exported="false" />
         <activity

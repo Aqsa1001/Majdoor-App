@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_app"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="95dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="50dp"
+        android:background="@drawable/reg_top3" />
+
+    <ImageView
+        android:layout_width="122dp"
+        android:layout_height="130dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/reg_top2" />
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="130dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/reg_top1"
+        android:layout_marginRight="300dp"
+        />
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="7dp"
+        app:srcCompat="@drawable/back_arrow"/>
+
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="130dp"
+        android:layout_marginLeft="32dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/reg_top4"/>
+
+
+    <TextView
+        android:id="@+id/verify_work"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/revalia"
+        android:text="Verify Work"
+        android:textColor="@color/offBlack"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/text22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/verify_work"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/cambay"
+        android:text="Upload your Video to verify your Skills."
+        android:textColor="@color/offBlack"
+        android:textSize="18dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text22"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/cambay"
+        android:text="Instructions:"
+        android:textColor="@color/offBlack"
+        android:textSize="23dp"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/text4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text3"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/cambay"
+        android:text="@string/verify"
+        android:textColor="@color/offBlack"
+        android:textSize="15dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/text5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text4"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/cambay"
+        android:layout_alignParentLeft="true"
+        android:text="Choose Category :"
+        android:textColor="@color/offBlack"
+        android:textSize="18dp"
+        android:textStyle="bold"/>
+
+    <Spinner
+        android:id="@+id/cat1"
+        android:layout_width="215dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/text4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/input_bg" />
+
+    <RelativeLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cat1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/black_bg">
+
+        <TextView
+            android:id="@+id/upload_files"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload files"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:textSize="24dp"
+            android:layout_marginTop="10dp"/>
+
+        <RelativeLayout
+            android:id="@+id/relative2"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/upload_files"
+            android:layout_centerHorizontal="true"
+            android:background="@color/white">
+
+
+            <ImageView
+                android:id="@+id/gallery"
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/gallery_vector" />
+
+            <TextView
+                android:id="@+id/choosefile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose files here...."
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/anekbangla"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="90dp"
+                android:textSize="20dp" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/relative2">
+
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+
+
+
+
+
+    <ImageView
+        android:id="@+id/bottom_black"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="80dp"
+        android:background="@drawable/bottom_off" />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="139dp"
+        android:layout_height="41dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_radius"
+        android:layout_centerHorizontal="true"
+        android:text="Done"
+        android:layout_marginBottom="15dp"
+        android:textColor="@color/offBlack"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/my_app" />
+</RelativeLayout>
+
