@@ -4,4 +4,11 @@
     <string name="provider_failed">Turn on location</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="verify">
+        <br>1.  Video of 2 to 3 minutes maximum.\n</br>
+        <br>2.  Your face is show in your video.\n</br>
+        <br>3.  Your work is show property.\n</br>
+        <br>4.  If you expert in 2 or more categories then make \n</br>
+        <br>      2 or more videos and then upload it.\n</br>
+    </string>
 </resources>
