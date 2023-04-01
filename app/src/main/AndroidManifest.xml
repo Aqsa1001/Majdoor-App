@@ -31,13 +31,19 @@
             android:exported="false" />
         <activity
             android:name=".Forgot1Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+
         <activity
             android:name=".BasicInfo2Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+
         <activity
             android:name=".LabourChooseActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+
         <activity
             android:name=".CompanyInfoActivity"
             android:exported="false"
@@ -69,7 +75,9 @@
 
         <activity
             android:name=".home"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+
         <activity
             android:name=".chooseActivity"
             android:exported="false"
