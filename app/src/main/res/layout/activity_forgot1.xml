@@ -45,7 +45,7 @@
         android:textColor="@color/offBlack" />
 
     <EditText
-        android:id="@+id/etID1"
+        android:id="@+id/sendCodeEmail"
         android:layout_width="match_parent"
         android:layout_height="43dp"
         android:layout_centerHorizontal="true"
@@ -64,10 +64,10 @@
         />
 
     <Button
-        android:id="@+id/btnBal"
+        android:id="@+id/sendCodeBtn"
         android:layout_width="139dp"
         android:layout_height="41dp"
-        android:layout_below="@id/etID1"
+        android:layout_below="@id/sendCodeEmail"
         android:background="@drawable/button_radius"
         android:layout_marginTop="25dp"
         android:layout_centerHorizontal="true"
