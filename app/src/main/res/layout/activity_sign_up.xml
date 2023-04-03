@@ -11,9 +11,9 @@
     <ImageView
         android:layout_width="350dp"
         android:layout_height="180dp"
-        android:layout_marginTop="100dp"
         android:layout_alignParentTop="true"
-        android:background="@drawable/signup_top1"/>
+        android:layout_marginTop="100dp"
+        android:background="@drawable/signup_top1" />
 
     <ImageView
         android:layout_width="match_parent"
@@ -32,75 +32,74 @@
         android:id="@+id/Banner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_alignParentLeft="true"
         android:layout_below="@+id/imageView1"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="30dp"
         android:fontFamily="@font/revalia"
         android:text="Sign Up"
+        android:textColor="@color/offBlack"
         android:textSize="45dp"
-        android:textStyle="bold"
-        android:textColor="@color/offBlack"/>
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/signupEmailField"
         android:layout_width="match_parent"
         android:layout_height="43dp"
+        android:layout_below="@id/Banner"
         android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
         android:background="@drawable/input_bg"
         android:drawableLeft="@drawable/mail_vector"
         android:drawablePadding="15dp"
-        android:hint="Enter Email or Mobile No"
-        android:layout_below="@id/Banner"
-        android:textAlignment="viewStart"
-        android:paddingLeft="10dp"
-        android:textStyle="bold"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:textColor="@color/offBlack"
         android:fontFamily="@font/anekbangla"
-        />
+        android:hint="Enter Email or Mobile No"
+        android:paddingLeft="10dp"
+        android:textAlignment="viewStart"
+        android:textColor="@color/offBlack"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/signupPassField"
         android:layout_width="match_parent"
         android:layout_height="43dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
         android:layout_below="@id/signupEmailField"
+        android:layout_centerHorizontal="true"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/input_bg"
         android:drawableStart="@drawable/lock_vector"
         android:drawablePadding="15dp"
+        android:fontFamily="@font/anekbangla"
         android:hint="Enter Password"
         android:inputType="textPassword"
         android:paddingLeft="10dp"
         android:textAlignment="viewStart"
-        android:textStyle="bold"
         android:textColor="@color/offBlack"
-        android:fontFamily="@font/anekbangla" />
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/signupConfPassField"
         android:layout_width="match_parent"
         android:layout_height="43dp"
-        android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true"
         android:layout_below="@id/signupPassField"
+        android:layout_centerHorizontal="true"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/input_bg"
         android:drawableStart="@drawable/lock_vector"
         android:drawablePadding="15dp"
+        android:fontFamily="@font/anekbangla"
         android:hint="Confirm Password"
         android:inputType="textPassword"
         android:paddingLeft="10dp"
         android:textAlignment="viewStart"
-        android:textStyle="bold"
         android:textColor="@color/offBlack"
-        android:fontFamily="@font/anekbangla" />
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/otp"
@@ -128,33 +127,31 @@
         android:layout_alignParentRight="true"
         android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
-        app:backgroundTint="@color/offBlack"
         android:background="@drawable/button_radius"
         android:text="Sign Up"
         android:textColor="#FFFF"
         android:textSize="18dp"
-        android:textStyle="bold"/>
-
+        android:textStyle="bold"
+        app:backgroundTint="@color/offBlack" />
 
 
     <ImageView
         android:id="@+id/line1"
         android:layout_width="330dp"
-        android:layout_centerHorizontal="true"
         android:layout_height="5dp"
-        android:layout_marginTop="25dp"
         android:layout_below="@id/signupBtn"
-        android:background="@drawable/dotline"
-        />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/dotline" />
 
     <TextView
         android:id="@+id/signupWith"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/line1"
-        android:textColor="@color/offBlack"
         android:layout_centerHorizontal="true"
         android:text="Or Signup With"
+        android:textColor="@color/offBlack"
         android:textSize="20dp"
         android:textStyle="bold" />
 
@@ -163,8 +160,8 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_below="@id/signupWith"
-        android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
         android:background="@drawable/google" />
 
     <ImageView
@@ -172,16 +169,16 @@
         android:layout_width="361.74dp"
         android:layout_height="131.94dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="80dp"
         android:layout_marginLeft="-20dp"
+        android:layout_marginTop="80dp"
         android:background="@drawable/signup_bottom2" />
 
     <ImageView
         android:id="@+id/bottom_black_signup"
         android:layout_width="381.44dp"
         android:layout_height="112.81dp"
-        android:layout_marginLeft="-20dp"
         android:layout_alignParentBottom="true"
+        android:layout_marginLeft="-20dp"
         android:background="@drawable/signup_bottom1" />
 </RelativeLayout>
 

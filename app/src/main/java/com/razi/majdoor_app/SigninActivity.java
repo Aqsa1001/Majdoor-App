@@ -38,7 +38,7 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signin);
-        forgotfield = findViewById(R.id.forgotText);
+        forgotfield = findViewById(R.id.forgotPassField);
         signInBtn = findViewById(R.id.signInBtn);
         mauth = FirebaseAuth.getInstance();
         signInBtn.setOnClickListener(this);
@@ -66,7 +66,7 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.forgotText:
+            case R.id.forgotPassField:
                 startActivity(new Intent(this,Forgot1Activity.class));
                 break;
             case R.id.signInBtn:

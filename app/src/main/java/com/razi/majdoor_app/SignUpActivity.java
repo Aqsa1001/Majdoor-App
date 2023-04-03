@@ -9,7 +9,6 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -101,7 +100,7 @@ private  FirebaseAuth auth;
                                             }
                                             else
                                             {
-                                                Toast.makeText(SignUpActivity.this, "Error", Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(SignUpActivity.this, "oyueee", Toast.LENGTH_SHORT).show();
                                             }
                                         }
                                     });
@@ -121,7 +120,7 @@ private  FirebaseAuth auth;
     public void onClick(View v) {
         switch (v.getId())
         {
-            case R.id.googleImage:
+            case R.id.Banner:
                 startActivity(new Intent(this,SignUpActivity.class));
                 break;
             case R.id.signupBtn:
