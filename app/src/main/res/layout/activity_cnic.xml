@@ -82,7 +82,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/cnicNumber"
+            android:id="@+id/cnicNo"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_below="@id/cnic"
@@ -197,7 +197,7 @@
         android:background="@drawable/bottom_off" />
 
     <Button
-        android:id="@+id/btn"
+        android:id="@+id/doneBtn"
         android:layout_width="139dp"
         android:layout_height="41dp"
         android:layout_alignParentBottom="true"
