@@ -45,11 +45,11 @@ public class BasicInfo2Activity extends AppCompatActivity {
                 DatePickerDialog dialog = new DatePickerDialog(BasicInfo2Activity.this, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                        month = month+1;
-                        String date = dayOfMonth+"/"+month+"/"+year;
+                        month = month + 1;
+                        String date = dayOfMonth + "/" + month + "/" + year;
                         dob.setText(date);
                     }
-                },year, month,day);
+                }, year, month, day);
                 dialog.show();
             }
         });
@@ -58,7 +58,7 @@ public class BasicInfo2Activity extends AppCompatActivity {
         doneBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(dob.getText().toString().isEmpty()){
+                if (dob.getText().toString().isEmpty()) {
                     dob.setError("Click to enter DOB");
                     dob.requestFocus();
                     return;
@@ -66,8 +66,7 @@ public class BasicInfo2Activity extends AppCompatActivity {
                     addressField.setError("Enter Address");
                     addressField.requestFocus();
                     return;
-                }
-                else{
+                } else {
                     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
                     databaseReference.child("Customers").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("BasicInfo").child("DOB").setValue(dob.getText().toString());
                     databaseReference.child("Customers").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("BasicInfo").child("Address").setValue(addressField.getText().toString());
@@ -82,7 +81,6 @@ public class BasicInfo2Activity extends AppCompatActivity {
         });
 
     }
-
 
 
 }

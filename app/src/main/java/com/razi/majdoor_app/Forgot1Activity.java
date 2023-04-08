@@ -42,7 +42,6 @@ public class Forgot1Activity extends AppCompatActivity {
                         Toast.makeText(Forgot1Activity.this, "User Don't Exist. Register First!", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(Forgot1Activity.this, SignUpActivity.class));
                     } else {
-                        Log.i("ID", auth.getCurrentUser().getUid());
                         String email = emailEditText.getText().toString().trim();
                         String otp = genOtp();
                         if (email.isEmpty()) {
@@ -61,14 +60,12 @@ public class Forgot1Activity extends AppCompatActivity {
                                 intent.putExtra("email", emailEditText.getText().toString());
                                 intent.putExtra("code", otp);
                                 startActivity(intent);
-
                             } else {
                                 Toast.makeText(Forgot1Activity.this, "Something wet wrong, please try again.", Toast.LENGTH_SHORT).show();
                             }
                         }
                     }
                 }
-
 
                 @Override
                 public void onCancelled(@NonNull DatabaseError error) {
