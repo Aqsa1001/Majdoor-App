@@ -45,7 +45,7 @@
         android:textColor="@color/offBlack" />
 
     <EditText
-        android:id="@+id/etID"
+        android:id="@+id/passField"
         android:layout_width="370dp"
         android:layout_height="43dp"
         android:layout_below="@id/enter"
@@ -61,11 +61,11 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/enter2"
+        android:id="@+id/confPassText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Confirm Password"
-        android:layout_below="@id/etID"
+        android:layout_below="@id/passField"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="30dp"
         android:textSize="24dp"
@@ -73,12 +73,12 @@
         android:textColor="@color/offBlack" />
 
     <EditText
-        android:id="@+id/etID2"
+        android:id="@+id/confPassField"
         android:layout_width="370dp"
         android:layout_height="43dp"
         android:layout_alignParentLeft="true"
         android:drawableLeft="@drawable/lock_vector"
-        android:layout_below="@id/enter2"
+        android:layout_below="@id/confPassText"
         android:layout_marginLeft="23dp"
         android:drawablePadding="10dp"
         android:paddingLeft="20dp"
@@ -88,14 +88,14 @@
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/btnBal"
+        android:id="@+id/resetBtn"
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:layout_below="@id/etID2"
+        android:layout_below="@id/confPassField"
         android:background="@drawable/button_radius"
         android:layout_marginTop="25dp"
         android:layout_centerHorizontal="true"
-        android:text="Sign in"
+        android:text="Reset"
         android:textColor="#fff"
         android:textSize="18dp"
         android:textStyle="bold"

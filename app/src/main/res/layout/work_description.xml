@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="26dp"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/work_description"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:inputType="textMultiLine"
+        android:hint="Type here...."
+        android:lines="10"
+        android:background="@drawable/edittext_border"
+        android:maxLines="10"
+        android:minLines="4"
+        android:gravity="top|left"
+        android:scrollbars="vertical" />
+
+</LinearLayout>

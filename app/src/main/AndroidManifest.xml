@@ -6,7 +6,6 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -17,6 +16,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Majdoor_App"
         tools:targetApi="31">
+        <activity
+            android:name=".home"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" >
+
+        <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".Forgot3Activity"
             android:exported="false" />
@@ -31,7 +39,8 @@
             android:exported="false" />
         <activity
             android:name=".LabourChooseActivity"
-            android:exported="false" />
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+        android:exported="false" />
         <activity
             android:name=".CompanyInfoActivity"
             android:exported="false"
@@ -56,14 +65,10 @@
             android:name=".WelcomeActivity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
-
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyAccUMUBqNZ4OiX6LcoVw7HBchI0tCNt6I" />
-
         <activity
-            android:name=".home"
-            android:exported="false" />
+            android:name=".Labor_HomePage_Activity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
             android:name=".chooseActivity"
             android:exported="false"
@@ -82,6 +87,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBFZ695_GViO8N-rDZ6eLyDwtLrS8tOKYU"/>
     </application>
 
 </manifest>

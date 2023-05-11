@@ -4,6 +4,8 @@
     <string name="provider_failed">Turn on location</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="myApiKey">AIzaSyBFZ695_GViO8N-rDZ6eLyDwtLrS8tOKYU</string>
+
     <string name="verify">
         <br>1.  Video of 2 to 3 minutes maximum.\n</br>
         <br>2.  Your face is show in your video.\n</br>

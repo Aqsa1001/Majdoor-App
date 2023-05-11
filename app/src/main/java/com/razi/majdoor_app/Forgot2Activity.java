@@ -108,8 +108,8 @@ public class Forgot2Activity extends AppCompatActivity {
                 otp4.setText("");
                 otp5.setText("");
                 otp6.setText("");
-                String otp = genOtp();
-                boolean isEmailSent = emailHandler.sendEmail(emailTemp, "Your One Time Password is:" + otp, "Your One Time Password is:" + otp, getApplicationContext());
+                otpTemp = genOtp();
+                boolean isEmailSent = emailHandler.sendEmail(emailTemp, "Your One Time Password is:" + otpTemp, "Your One Time Password is:" + otpTemp, getApplicationContext());
                 if(isEmailSent){
                     Toast.makeText(Forgot2Activity.this, "Sent Again Please Check", Toast.LENGTH_SHORT).show();
                 }
