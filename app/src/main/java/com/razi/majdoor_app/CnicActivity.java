@@ -51,11 +51,12 @@ public class CnicActivity extends AppCompatActivity {
                             try {
                                 Boolean temp = response.getBoolean("criminalStatus");
                                 if (temp == true) {
-                                    Toast.makeText(CnicActivity.this, "Its Criminal!", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(CnicActivity.this, "Detected Criminal!", Toast.LENGTH_SHORT).show();
                                     return;
                                 }
                                 Toast.makeText(CnicActivity.this, "Not Criminal", Toast.LENGTH_SHORT).show();
                             } catch (JSONException e) {
+                                Toast.makeText(CnicActivity.this, "Please Check CNIC. Person Not Found Against this CNIC", Toast.LENGTH_SHORT).show();
                                 Log.i("Error:", "In Response Catch");
                                 e.printStackTrace();
                             }
@@ -65,7 +66,8 @@ public class CnicActivity extends AppCompatActivity {
                         public void onErrorResponse(VolleyError error) {
                             if (error.networkResponse != null && error.networkResponse.statusCode == 404) {
                                 // URL not found
-                                Toast.makeText(CnicActivity.this, "Please Check CNIC. Person Not Found Against this CNIC", Toast.LENGTH_SHORT).show();
+
+                                Log.i("Error","Server Error");
                             } else {
                                 // Other network errors
                                 error.printStackTrace();
