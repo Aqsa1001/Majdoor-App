@@ -1,26 +1,17 @@
 package com.razi.majdoor_app;
 
-import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.auth.api.signin.GoogleSignIn;
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
-import com.google.android.gms.auth.api.signin.GoogleSignInClient;
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -67,7 +58,7 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.forgotPassField:
-                startActivity(new Intent(this,Forgot1Activity.class));
+                startActivity(new Intent(this, Forgot1Activity.class));
                 break;
             case R.id.signInBtn:
                 LoginUser();
@@ -77,52 +68,43 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     private void LoginUser() {
-        String email= signInEmailField.getText().toString().trim();
-        String password= signInPassField.getText().toString().trim();
+        String email = signInEmailField.getText().toString().trim();
+        String password = signInPassField.getText().toString().trim();
 
-        if(email.isEmpty())
-        {
+        if (email.isEmpty()) {
             signInEmailField.setError("Enter Email");
             signInEmailField.requestFocus();
             return;
         }
 
-        if(password.isEmpty())
-        {
+        if (password.isEmpty()) {
             signInPassField.setError("Enter Password");
             signInPassField.requestFocus();
             return;
         }
-        if(!(Patterns.EMAIL_ADDRESS.matcher(email).matches()))
-        {
+        if (!(Patterns.EMAIL_ADDRESS.matcher(email).matches())) {
             signInEmailField.setError("Please Provide Valid Email");
             signInEmailField.requestFocus();
             return;
         }
-        if(password.length() <8)
-        {
+        if (password.length() < 8) {
             signInPassField.setError("Enter atleast 8 characters");
             signInPassField.requestFocus();
             return;
         }
-        mauth.signInWithEmailAndPassword(email,password)
+        mauth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful())
-                        {
-                            FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
-                            if(user.isEmailVerified()) {
+                        if (task.isSuccessful()) {
+                            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                            if (user.isEmailVerified()) {
                                 startActivity(new Intent(SigninActivity.this, home.class));
-                            }
-                            else {
+                            } else {
                                 user.sendEmailVerification();
                                 Toast.makeText(SigninActivity.this, "Check your email for verification", Toast.LENGTH_SHORT).show();
                             }
-
-                        }
-                        else
-                        {
+                        } else {
                             Toast.makeText(SigninActivity.this, "Failed to login", Toast.LENGTH_SHORT).show();
                         }
                     }

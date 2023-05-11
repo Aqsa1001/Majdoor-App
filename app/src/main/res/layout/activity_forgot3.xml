@@ -10,14 +10,15 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="94dp"
-        android:background="@drawable/forgot_top"/>
+        android:background="@drawable/forgot_top" />
+
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
-        app:srcCompat="@drawable/back_arrow"/>
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/back_arrow" />
 
     <TextView
         android:id="@+id/Sign_In"
@@ -26,23 +27,23 @@
         android:layout_below="@+id/imageView1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="80dp"
-        android:text="New Password"
-        android:textSize="35dp"
         android:fontFamily="@font/revalia"
+        android:text="New Password"
         android:textColor="@color/offBlack"
+        android:textSize="35dp"
         android:textStyle="bold" />
 
     <TextView
         android:id="@+id/enter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Enter new Password"
         android:layout_below="@id/Sign_In"
-        android:layout_marginTop="30dp"
         android:layout_marginLeft="30dp"
-        android:textSize="24dp"
+        android:layout_marginTop="30dp"
         android:fontFamily="@font/anekbangla"
-        android:textColor="@color/offBlack" />
+        android:text="Enter new Password"
+        android:textColor="@color/offBlack"
+        android:textSize="24dp" />
 
     <EditText
         android:id="@+id/passField"
@@ -64,26 +65,26 @@
         android:id="@+id/confPassText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Confirm Password"
         android:layout_below="@id/passField"
-        android:layout_marginTop="15dp"
         android:layout_marginLeft="30dp"
-        android:textSize="24dp"
+        android:layout_marginTop="15dp"
         android:fontFamily="@font/anekbangla"
-        android:textColor="@color/offBlack" />
+        android:text="Confirm Password"
+        android:textColor="@color/offBlack"
+        android:textSize="24dp" />
 
     <EditText
         android:id="@+id/confPassField"
         android:layout_width="370dp"
         android:layout_height="43dp"
-        android:layout_alignParentLeft="true"
-        android:drawableLeft="@drawable/lock_vector"
         android:layout_below="@id/confPassText"
+        android:layout_alignParentLeft="true"
         android:layout_marginLeft="23dp"
-        android:drawablePadding="10dp"
-        android:paddingLeft="20dp"
         android:background="@drawable/input_bg"
+        android:drawableLeft="@drawable/lock_vector"
+        android:drawablePadding="10dp"
         android:hint="|   *********"
+        android:paddingLeft="20dp"
         android:textAlignment="viewStart"
         android:textStyle="bold" />
 
@@ -92,9 +93,9 @@
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_below="@id/confPassField"
-        android:background="@drawable/button_radius"
-        android:layout_marginTop="25dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/button_radius"
         android:text="Reset"
         android:textColor="#fff"
         android:textSize="18dp"
@@ -104,8 +105,8 @@
     <ImageView
         android:id="@+id/bottom_black"
         android:layout_width="match_parent"
-        android:layout_alignParentBottom="true"
         android:layout_height="250dp"
+        android:layout_alignParentBottom="true"
         android:layout_marginTop="120dp"
         android:background="@drawable/forgot_bottom" />
 
@@ -113,8 +114,8 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="167dp"
         android:layout_marginLeft="10dp"
+        android:layout_marginTop="167dp"
         android:layout_marginBottom="30dp"
         android:background="@drawable/forgot3_bottom" />
 </RelativeLayout>

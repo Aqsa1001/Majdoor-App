@@ -78,19 +78,16 @@ public class Forgot3Activity extends AppCompatActivity {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
                                         Toast.makeText(Forgot3Activity.this, "Auth Updated!", Toast.LENGTH_SHORT).show();
-
                                     }
                                 }).addOnFailureListener(new OnFailureListener() {
                                     @Override
                                     public void onFailure(@NonNull Exception e) {
                                         Toast.makeText(Forgot3Activity.this, "Auth Not Updated!", Toast.LENGTH_SHORT).show();
-
                                     }
                                 });
                                 Toast.makeText(Forgot3Activity.this, "Man Changed Successfully", Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(Forgot3Activity.this, SigninActivity.class));
                             }
-
                         }
 
                         @Override
@@ -98,18 +95,6 @@ public class Forgot3Activity extends AppCompatActivity {
                             Toast.makeText(Forgot3Activity.this, "Man Not Updated!", Toast.LENGTH_SHORT).show();
                         }
                     });
-
-                   /* user.updatePassword(passField.getText().toString()).addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-                            Toast.makeText(Forgot3Activity.this, "Updated!", Toast.LENGTH_SHORT).show();
-                        }
-                    }).addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(Forgot3Activity.this, "Not Updated!", Toast.LENGTH_SHORT).show();
-                        }
-                    });*/
                 }
             }
         });

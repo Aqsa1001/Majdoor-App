@@ -11,58 +11,57 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="250dp"
-        android:background="@drawable/signin_top_background"/>
+        android:background="@drawable/signin_top_background" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="400dp"
         android:layout_height="280dp"
         android:layout_alignParentTop="true"
-        app:srcCompat="@drawable/signin_bg"/>
+        app:srcCompat="@drawable/signin_bg" />
 
     <TextView
         android:id="@+id/Sign_In"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
         android:layout_below="@id/imageView"
         android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/revalia"
         android:text="Sign In"
-        android:textSize="45dp"
         android:textColor="@color/offBlack"
-        android:textStyle="bold"
-        android:fontFamily="@font/revalia"/>
-
+        android:textSize="45dp"
+        android:textStyle="bold" />
 
 
     <EditText
         android:id="@+id/signInEmailField"
         android:layout_width="match_parent"
         android:layout_height="43dp"
+        android:layout_below="@id/Sign_In"
         android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/input_bg"
         android:drawableLeft="@drawable/mail_vector"
         android:drawablePadding="15dp"
+        android:hint="Enter Email"
         android:paddingLeft="20dp"
-        android:layout_below="@id/Sign_In"
-        android:background="@drawable/input_bg"
-        android:hint="Enter Email or Mobile No"
         android:textAlignment="viewStart"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
         android:textStyle="bold" />
 
     <EditText
         android:id="@+id/signInPassField"
         android:layout_width="match_parent"
         android:layout_height="43dp"
+        android:layout_below="@id/signInEmailField"
         android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
         android:background="@drawable/input_bg"
         android:drawableStart="@drawable/lock_vector"
-        android:layout_below="@id/signInEmailField"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
         android:drawablePadding="15dp"
         android:hint="Enter Password"
         android:inputType="textPassword"
@@ -78,8 +77,8 @@
         android:layout_centerVertical="true"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="10dp"
-        android:textColor="@color/offBlack"
         android:text="Forgot your Password?"
+        android:textColor="@color/offBlack"
         android:textSize="20dp"
         android:textStyle="bold" />
 
@@ -87,39 +86,37 @@
         android:id="@+id/signInBtn"
         android:layout_width="139dp"
         android:layout_height="41dp"
+        android:layout_below="@id/forgotPassField"
         android:layout_alignParentRight="true"
         android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
-        app:backgroundTint="@color/offBlack"
-        android:layout_below="@id/forgotPassField"
         android:background="@drawable/button_radius"
+        android:paddingLeft="20dp"
         android:text="Sign in"
         android:textColor="#fff"
         android:textSize="18dp"
-        android:paddingLeft="20dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:backgroundTint="@color/offBlack" />
 
     <ImageView
         android:id="@+id/line1"
         android:layout_width="330dp"
-        android:layout_centerHorizontal="true"
         android:layout_height="5dp"
-        android:layout_marginTop="15dp"
         android:layout_below="@id/signInBtn"
-        android:background="@drawable/dotline"
-        />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/dotline" />
 
     <TextView
         android:id="@+id/loginWith"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/line1"
-        android:textColor="@color/offBlack"
         android:layout_centerHorizontal="true"
         android:text="Or Login With"
+        android:textColor="@color/offBlack"
         android:textSize="20dp"
         android:textStyle="bold" />
-
 
 
     <ImageView
@@ -127,8 +124,8 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_below="@id/loginWith"
-        android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
         android:background="@drawable/google" />
 
     <ImageView
@@ -136,18 +133,17 @@
         android:layout_width="wrap_content"
         android:layout_height="90dp"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/signin_bottom"
-        />
+        android:background="@drawable/signin_bottom" />
+
     <TextView
         android:id="@+id/CreateAccountText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:text="Don't have an account? Create new"
-        android:textSize="20dp"
-        android:fontFamily="@font/cambay"
-        android:textColor="@color/white"
-        android:textStyle="bold"
         android:layout_alignParentBottom="true"
-        />
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/cambay"
+        android:text="Don't have an account? Create new"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold" />
 </RelativeLayout>
