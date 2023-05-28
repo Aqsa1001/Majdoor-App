@@ -24,12 +24,17 @@ public class Forgot2Activity extends AppCompatActivity {
     String OTP;
     Button verifyBtn;
     TextView sendCodeAgain;
+    String category;
     EmailHandler emailHandler = EmailHandler.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgot2);
+
+        if (getIntent().hasExtra("Category")) {
+            category = getIntent().getStringExtra("Category");
+        }
 
         if (getIntent().hasExtra("email") && getIntent().hasExtra("code")) {
             emailTemp = getIntent().getStringExtra("email");
@@ -85,6 +90,7 @@ public class Forgot2Activity extends AppCompatActivity {
 
                         Intent intent = new Intent(getApplicationContext(), Forgot3Activity.class);
                         intent.putExtra("email", emailTemp);
+                        intent.putExtra("Category",category);
                         startActivity(intent);
                     } else {
                         Toast.makeText(Forgot2Activity.this, "Enter Correct OTP!", Toast.LENGTH_SHORT).show();

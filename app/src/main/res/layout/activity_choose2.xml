@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".chooseActivity">
+
+
+    <ImageView
+        android:layout_width="550dp"
+        android:layout_height="312dp"
+        android:layout_alignParentTop="true"
+        app:srcCompat="@drawable/vector1" />
+
+
+    <ImageView
+        android:id="@+id/logo_img"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="65dp"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/logo" />
+
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:layout_below="@id/logo_img">
+
+        <ImageButton
+            android:id="@+id/IndBtn"
+            android:layout_width="190px"
+            android:layout_height="190px"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/button_radius"
+            android:layout_marginLeft="90dp"
+            app:srcCompat="@drawable/ic_baseline_person_24" />
+
+        <ImageButton
+            android:id="@+id/contractbtn"
+            android:layout_width="190px"
+            android:layout_height="190px"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="90dp"
+            android:background="@drawable/button_radius"
+            app:srcCompat="@drawable/ic_baseline_person_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Individual"
+            android:layout_below="@id/IndBtn"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="90dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="17dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contractor"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/contractbtn"
+            android:textColor="@color/black"
+            android:layout_marginRight="90dp"
+            android:textStyle="bold"
+            android:textSize="17dp"/>
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:layout_width="95dp"
+        android:layout_height="150dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        app:srcCompat="@drawable/vector2" />
+
+</RelativeLayout>

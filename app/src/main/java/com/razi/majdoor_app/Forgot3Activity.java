@@ -28,10 +28,16 @@ public class Forgot3Activity extends AppCompatActivity {
     Button resetButton;
     String emailTemp;
 
+    String category;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgot3);
+
+        if (getIntent().hasExtra("Category")) {
+            category = getIntent().getStringExtra("Category");
+        }
 
         if (getIntent().hasExtra("email")) {
             emailTemp = getIntent().getStringExtra("email");
@@ -67,13 +73,13 @@ public class Forgot3Activity extends AppCompatActivity {
                     FirebaseAuth auth = FirebaseAuth.getInstance();
                     FirebaseUser user = auth.getCurrentUser();
 
-                    FirebaseDatabase.getInstance().getReference("Users").addValueEventListener(new ValueEventListener() {
+                    FirebaseDatabase.getInstance().getReference(category).addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
                             String email = snapshot.child(auth.getCurrentUser().getUid()).child("email").getValue(String.class);
                             if (email.equals(emailTemp)) {
                                 DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
-                                databaseReference.child("Users").child(auth.getCurrentUser().getUid()).child("password").setValue(passField.getText().toString());
+                                databaseReference.child(category).child(auth.getCurrentUser().getUid()).child("password").setValue(passField.getText().toString());
                                 user.updatePassword(passField.getText().toString()).addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
@@ -86,7 +92,10 @@ public class Forgot3Activity extends AppCompatActivity {
                                     }
                                 });
                                 Toast.makeText(Forgot3Activity.this, "Man Changed Successfully", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(Forgot3Activity.this, SigninActivity.class));
+                                Intent intent = new Intent(Forgot3Activity.this, SigninActivity.class);
+                                intent.putExtra("Category",category);
+                                startActivity(intent);
+
                             }
                         }
 

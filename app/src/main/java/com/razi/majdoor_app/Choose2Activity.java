@@ -16,36 +16,36 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class chooseActivity extends AppCompatActivity {
+public class Choose2Activity extends AppCompatActivity {
 
-    ImageButton customerbtn,laborbtn;
+    ImageButton indBtn,contractBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_choose);
-        customerbtn = findViewById(R.id.customerbtn);
-        laborbtn = findViewById(R.id.laborbtn);
+        setContentView(R.layout.activity_choose2);
+        indBtn = findViewById(R.id.IndBtn);
+        contractBtn = findViewById(R.id.contractbtn);
 
 
 
-        customerbtn.setOnClickListener(new View.OnClickListener() {
+        indBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(chooseActivity.this, SigninActivity.class);
-                intent.putExtra("Category","customer");
+                Intent intent = new Intent(Choose2Activity.this, SigninActivity.class);
+                intent.putExtra("Category","individual");
                 startActivity(intent);
             }
         });
-        laborbtn.setOnClickListener(new View.OnClickListener() {
+        contractBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(chooseActivity.this, Choose2Activity.class);
+
+                Intent intent = new Intent(Choose2Activity.this, SigninActivity.class);
+                intent.putExtra("Category","contract");
                 startActivity(intent);
             }
         });
     }
-
-
 
 }

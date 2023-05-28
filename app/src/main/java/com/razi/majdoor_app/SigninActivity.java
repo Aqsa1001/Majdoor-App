@@ -23,6 +23,8 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
     EditText signInEmailField, signInPassField;
     Button signInBtn;
     private FirebaseAuth mauth;
+    String category;
+
 
 
     @Override
@@ -37,11 +39,16 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
         signInPassField = findViewById(R.id.signInPassField);
         createAccountText = findViewById(R.id.CreateAccountText);
 
+        if (getIntent().hasExtra("Category")) {
+            category = getIntent().getStringExtra("Category");
+        }
+
 
         createAccountText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SigninActivity.this, SignUpActivity.class);
+                intent.putExtra("Category",category);
                 startActivity(intent);
             }
         });
@@ -49,6 +56,7 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SigninActivity.this, Forgot1Activity.class);
+                intent.putExtra("Category",category);
                 startActivity(intent);
             }
         });
@@ -110,4 +118,17 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
                     }
                 });
     }
+
+
+    protected void onStart() {
+        super.onStart();
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if(user != null){
+            //Toast.makeText(SignUpActivity.this, "Successfully Registered! ", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, home.class);
+            intent.putExtra("Category",category);
+            startActivity(intent);
+        }
+    }
+
 }

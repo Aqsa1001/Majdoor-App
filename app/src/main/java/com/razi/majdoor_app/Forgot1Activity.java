@@ -22,19 +22,24 @@ import java.util.Random;
 
 public class Forgot1Activity extends AppCompatActivity {
     private EditText emailEditText;
+    String category;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgot1);
 
+
+        if (getIntent().hasExtra("Category")) {
+            category = getIntent().getStringExtra("Category");
+        }
         emailEditText = findViewById(R.id.sendCodeEmail);
         Button sendButton = findViewById(R.id.sendCodeBtn);
         EmailHandler emailHandler = EmailHandler.getInstance();
         sendButton.setOnClickListener(v -> {
             FirebaseAuth auth = FirebaseAuth.getInstance();
 
-            FirebaseDatabase.getInstance().getReference("Users").addValueEventListener(new ValueEventListener() {
+            FirebaseDatabase.getInstance().getReference(category).addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     String emale = snapshot.child(auth.getCurrentUser().getUid()).child("email").getValue(String.class);
@@ -59,6 +64,7 @@ public class Forgot1Activity extends AppCompatActivity {
                                 Intent intent = new Intent(getApplicationContext(), Forgot2Activity.class);
                                 intent.putExtra("email", emailEditText.getText().toString());
                                 intent.putExtra("code", otp);
+                                intent.putExtra("Category",category);
                                 startActivity(intent);
                             } else {
                                 Toast.makeText(Forgot1Activity.this, "Something wet wrong, please try again.", Toast.LENGTH_SHORT).show();

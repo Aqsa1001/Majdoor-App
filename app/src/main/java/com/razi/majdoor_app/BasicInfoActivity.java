@@ -7,17 +7,27 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.DataCollectionDefaultChange;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -34,6 +44,7 @@ public class BasicInfoActivity extends AppCompatActivity {
     Button nextBtn;
     Uri imageUri;
     StorageReference storageReference;
+    String category;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,8 +56,11 @@ public class BasicInfoActivity extends AppCompatActivity {
         lNameField = findViewById(R.id.lNameField);
         pNoField = findViewById(R.id.phNoField);
         nextBtn = findViewById(R.id.nextBtn);
+        storageReference = FirebaseStorage.getInstance().getReference().child("User Profile Pic");
         imageUri = null;
-
+        if (getIntent().hasExtra("Category")) {
+            category = getIntent().getStringExtra("Category");
+        }
 
         selectorImg.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,6 +68,7 @@ public class BasicInfoActivity extends AppCompatActivity {
                 selectImage();
             }
         });
+
 
         nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,6 +81,8 @@ public class BasicInfoActivity extends AppCompatActivity {
             }
         });
     }
+
+
 
     private void uploadDataToDb() {
         //Pic Upload Parameter
@@ -106,9 +123,21 @@ public class BasicInfoActivity extends AppCompatActivity {
 
                             selectorImg.setImageDrawable(getDrawable(R.drawable.profile_pic));
                             selectorImg.setImageURI(null);
+                            storageReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                @Override
+                                public void onSuccess(Uri uri) {
+                                    DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
+                                    if (category.matches("individual")) {
+                                        databaseReference.child("Individual").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("BasicInfo").child("Profile Url").setValue(uri.toString());
+                                    } if (category.matches("contract")) {
+                                        databaseReference.child("Contractor").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("BasicInfo").child("Profile Url").setValue(uri.toString());
+                                    } if (category.matches("customer")) {
+                                        databaseReference.child("Customer").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("BasicInfo").child("Profile Url").setValue(uri.toString());
+                                    }
+                                }
+                            });
                             Toast.makeText(BasicInfoActivity.this, "Successfully Uploaded", Toast.LENGTH_SHORT).show();
-                        /*if (progressDialog.isShowing())
-                            progressDialog.dismiss();*/
+
                         }
                     }).addOnFailureListener(new OnFailureListener() {
                         @Override
@@ -121,11 +150,31 @@ public class BasicInfoActivity extends AppCompatActivity {
 
             //Inserting Data in DB
             DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
-            databaseReference.child("Customers").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("BasicInfo").child("First Name").setValue(fNameField.getText().toString());
-            databaseReference.child("Customers").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("BasicInfo").child("Last Name").setValue(lNameField.getText().toString());
-            databaseReference.child("Customers").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("BasicInfo").child("Phone No").setValue(pNoField.getText().toString());
-            startActivity(new Intent(BasicInfoActivity.this, BasicInfo2Activity.class));
-
+            if (category.matches("individual")) {
+                databaseReference.child("Individual").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("BasicInfo").child("First Name").setValue(fNameField.getText().toString());
+                databaseReference.child("Individual").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("BasicInfo").child("Last Name").setValue(lNameField.getText().toString());
+                databaseReference.child("Individual").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("BasicInfo").child("Phone No").setValue(pNoField.getText().toString());
+                databaseReference.child("Individual").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("BasicInfo").child("Status").setValue("1");
+                Intent intent = new Intent(BasicInfoActivity.this, BasicInfo2Activity.class);
+                intent.putExtra("Category",category);
+                startActivity(intent);
+            } else if (category.matches("contract")) {
+                databaseReference.child("Contractor").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("BasicInfo").child("First Name").setValue(fNameField.getText().toString());
+                databaseReference.child("Contractor").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("BasicInfo").child("Last Name").setValue(lNameField.getText().toString());
+                databaseReference.child("Contractor").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("BasicInfo").child("Phone No").setValue(pNoField.getText().toString());
+                databaseReference.child("Contractor").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("BasicInfo").child("Status").setValue("1");
+                Intent intent = new Intent(BasicInfoActivity.this, BasicInfo2Activity.class);
+                intent.putExtra("Category",category);
+                startActivity(intent);
+            } else if (category.matches("customer")) {
+                databaseReference.child("Customer").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("BasicInfo").child("First Name").setValue(fNameField.getText().toString());
+                databaseReference.child("Customer").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("BasicInfo").child("Last Name").setValue(lNameField.getText().toString());
+                databaseReference.child("Customer").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("BasicInfo").child("Phone No").setValue(pNoField.getText().toString());
+                databaseReference.child("Customer").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("BasicInfo").child("Status").setValue("1");
+                Intent intent = new Intent(BasicInfoActivity.this, BasicInfo2Activity.class);
+                intent.putExtra("Category",category);
+                startActivity(intent);
+            }
             fNameField.setText("");
             lNameField.setText("");
             pNoField.setText("");
@@ -133,6 +182,7 @@ public class BasicInfoActivity extends AppCompatActivity {
             finish();
         }
     }
+
 
     private void selectImage() {
         Intent intent = new Intent();
@@ -150,3 +200,4 @@ public class BasicInfoActivity extends AppCompatActivity {
         }
     }
 }
+

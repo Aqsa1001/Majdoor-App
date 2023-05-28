@@ -83,7 +83,10 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_below="@id/fname"
-            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/input_bg"
             android:textAlignment="viewStart"
             android:textStyle="bold" />
@@ -103,7 +106,7 @@
         android:background="@drawable/black_bg">
 
         <TextView
-            android:id="@+id/Lname"
+            android:id="@+id/cName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Enter Categories"
@@ -117,7 +120,7 @@
             android:id="@+id/cat1"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_below="@id/Lname"
+            android:layout_below="@id/cName"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
@@ -143,7 +146,10 @@
             android:layout_height="40dp"
             android:layout_below="@id/txt"
             android:layout_alignParentLeft="true"
-            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/input_bg" />
 
         <Spinner
@@ -152,7 +158,10 @@
             android:layout_height="40dp"
             android:layout_below="@id/txt"
             android:layout_alignParentRight="true"
-            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
             android:autofillHints="jds"
             android:background="@drawable/input_bg" />
 
@@ -184,7 +193,7 @@
             android:textColor="@color/white" />
 
         <EditText
-            android:id="@+id/etemail"
+            android:id="@+id/noOfLabors"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_below="@id/email"
@@ -209,7 +218,7 @@
         android:background="@drawable/bottom_off" />
 
     <Button
-        android:id="@+id/btn"
+        android:id="@+id/doneBtn"
         android:layout_width="139dp"
         android:layout_height="41dp"
         android:layout_alignParentBottom="true"

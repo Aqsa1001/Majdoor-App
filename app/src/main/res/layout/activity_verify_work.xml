@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/my_app"
-    tools:context=".MainActivity">
+    tools:context=".VerifyWorkActivity">
 
 
     <ImageView
@@ -51,7 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView1"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="58dp"
         android:fontFamily="@font/revalia"
         android:text="Verify Work"
         android:textColor="@color/offBlack"
@@ -64,12 +64,12 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/verify_work"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="-4dp"
         android:fontFamily="@font/cambay"
         android:text="Upload your Video to verify your Skills."
         android:textColor="@color/offBlack"
         android:textSize="18dp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/text3"
@@ -77,22 +77,25 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/text22"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="-9dp"
         android:fontFamily="@font/cambay"
         android:text="Instructions:"
         android:textColor="@color/offBlack"
         android:textSize="23dp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
+
     <TextView
         android:id="@+id/text4"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="224dp"
         android:layout_below="@+id/text3"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="0dp"
         android:fontFamily="@font/cambay"
         android:text="@string/verify"
         android:textColor="@color/offBlack"
         android:textSize="15dp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/text5"
@@ -108,7 +111,7 @@
         android:textStyle="bold"/>
 
     <Spinner
-        android:id="@+id/cat1"
+        android:id="@+id/categorySpinner"
         android:layout_width="215dp"
         android:layout_height="25dp"
         android:layout_alignParentRight="true"
@@ -119,35 +122,23 @@
 
     <RelativeLayout
         android:id="@+id/linearLayout1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/cat1"
+        android:layout_width="376dp"
+        android:layout_height="156dp"
+        android:layout_below="@id/categorySpinner"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="15dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="15dp"
         android:background="@drawable/black_bg">
 
-        <TextView
-            android:id="@+id/upload_files"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Upload files"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:layout_centerHorizontal="true"
-            android:textSize="24dp"
-            android:layout_marginTop="10dp"/>
-
         <RelativeLayout
             android:id="@+id/relative2"
             android:layout_width="match_parent"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
             android:layout_height="55dp"
-            android:layout_marginTop="5dp"
-            android:layout_below="@id/upload_files"
             android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
             android:background="@color/white">
 
 
@@ -155,42 +146,61 @@
                 android:id="@+id/gallery"
                 android:layout_width="40dp"
                 android:layout_height="35dp"
-                android:layout_marginTop="10dp"
                 android:layout_alignParentLeft="true"
                 android:layout_marginLeft="20dp"
+                android:layout_centerVertical="true"
                 android:background="@drawable/gallery_vector" />
 
             <TextView
-                android:id="@+id/choosefile"
+                android:id="@+id/chooseFileText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/anekbangla"
                 android:text="Choose files here...."
                 android:textColor="@color/black"
-                android:textStyle="bold"
-                android:fontFamily="@font/anekbangla"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="90dp"
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/delVideoIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/delete"
+                android:layout_centerVertical="true"/>
 
         </RelativeLayout>
 
         <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="95dp"
+            android:layout_width="332dp"
+            android:layout_height="71dp"
+            android:layout_below="@id/relative2"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
             android:layout_marginTop="15dp"
-            android:layout_marginBottom="10dp"
-            android:layout_below="@id/relative2">
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp">
+            <LinearLayout
+                android:id="@+id/linear_layout_videos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!--<TextView
+                    android:id="@+id/catText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    />-->
 
+            </LinearLayout>
 
         </ScrollView>
 
     </RelativeLayout>
-
-
-
-
 
 
     <ImageView
@@ -201,7 +211,7 @@
         android:background="@drawable/bottom_off" />
 
     <Button
-        android:id="@+id/btn"
+        android:id="@+id/DoneBtn"
         android:layout_width="139dp"
         android:layout_height="41dp"
         android:layout_alignParentBottom="true"
@@ -214,4 +224,3 @@
         android:textStyle="bold"
         app:backgroundTint="@color/my_app" />
 </RelativeLayout>
-
